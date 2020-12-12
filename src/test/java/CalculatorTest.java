@@ -5,31 +5,31 @@ import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
 
+    Calculator calculator = new Calculator();
     @Test
     public void returnZero(){
-        Calculator calculator = new Calculator();
         assertEquals(0, calculator.add (""));
     }
     @Test
     public void returnNumber(){
-        Calculator calculator = new Calculator();
         assertEquals(1, calculator.add ("1"));
     }
     @Test
     public void returnNumbers(){
-        Calculator calculator = new Calculator();
         assertEquals(2, calculator.add ("2"));
     }
     @Test
     public void numberCommaNumberSum (){
-        Calculator calculator = new Calculator();
         assertEquals(3, calculator.add("1,2"));
 
     }
     @Test
     public void manyNumberCommaSum (){
-        Calculator calculator = new Calculator();
         assertEquals(15, calculator.add("1,2,5,4,3"));
+    }
+    @Test
+    public void handleNewLines (){
+        assertEquals(6, calculator.add("1\n2,3"));
     }
 
 }
