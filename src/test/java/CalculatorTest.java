@@ -20,5 +20,10 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertEquals(2, calculator.add ("2"));
     }
+    @Test
+    public void numberCommaNumberSum (){
+        Calculator calculator = new Calculator();
+        assertEquals(3, calculator.add("1,2"));
+    }
 
 }
