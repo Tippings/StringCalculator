@@ -1,12 +1,15 @@
 public class Calculator {
     public static int add(String inputString) {
-       if(inputString.isEmpty()) {
+       if(inputString.isEmpty())
            return 0;
-       } else if (inputString.contains(",")){
-           String[] numbers = inputString.split(",");
-           return Integer.parseInt(numbers[0])+Integer.parseInt(numbers[1]);
-       }else {
-           return Integer.parseInt(inputString);
+
+       String[] numbers = inputString.split(",");
+           int sum = 0;
+           for (String number : numbers) {
+               sum += Integer.valueOf(number);
+           }
+
+           return sum;
        }
     }
-}
+

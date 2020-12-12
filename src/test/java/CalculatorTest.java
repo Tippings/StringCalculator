@@ -24,6 +24,12 @@ public class CalculatorTest {
     public void numberCommaNumberSum (){
         Calculator calculator = new Calculator();
         assertEquals(3, calculator.add("1,2"));
+
+    }
+    @Test
+    public void manyNumberCommaSum (){
+        Calculator calculator = new Calculator();
+        assertEquals(15, calculator.add("1,2,5,4,3"));
     }
 
 }
