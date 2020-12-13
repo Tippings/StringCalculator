@@ -31,5 +31,9 @@ public class CalculatorTest {
     public void handleNewLines (){
         assertEquals(6, calculator.add("1\n2,3"));
     }
+    @Test
+    public void handleAnyDelimiter (){
+        assertEquals(3, calculator.add("//;\n1;2"));
+    }
 
 }
